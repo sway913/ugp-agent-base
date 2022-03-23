@@ -40,10 +40,12 @@ if (_default_use_allocator_shim && _is_partition_alloc_platform &&
 
 declare_args() {
   # Memory allocator to use. Set to "none" to use default allocator.
-  use_allocator = _default_allocator
+  # use_allocator = _default_allocator
+  use_allocator = "none"
 
   # Causes all the allocations to be routed via allocator_shim.cc.
-  use_allocator_shim = _default_use_allocator_shim
+  # use_allocator_shim = _default_use_allocator_shim
+  use_allocator_shim = false
 
   # Whether PartitionAlloc should be available for use or not.
   # true makes PartitionAlloc linked to the executable or shared library and
